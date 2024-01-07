@@ -39,7 +39,7 @@ const background: MantineColorsTuple = [
 
   "#F5F7FA",
   "#F5F7FA",
-  "#F5F7FA",
+  "#20262E",
   "#F5F7FA",
   "#F5F7FA",
   "#F5F7FA",
@@ -51,10 +51,10 @@ const background: MantineColorsTuple = [
 
 const text: MantineColorsTuple = [
 
+  "#ffffff",
   "#292F3B",
-  "#292F3B",
-  "#292F3B",
-  "#292F3B",
+  "#D7DADE",
+  "#BABCBF",
   "#292F3B",
   "#292F3B",
   "#292F3B",
@@ -66,12 +66,7 @@ const text: MantineColorsTuple = [
 
 export const theme = createTheme({
   components: {
-    // ActionIcon: ActionIcon.extend({
-    //   classNames: IconButtonClasses,
-    // }),
-    // Button: Button.extend({
-    //   classNames: ButtonClasses
-    // }),
+  
   },
 
   scale: 1,
@@ -84,8 +79,22 @@ export const theme = createTheme({
   colors: {
     lyricBlue,
     secondary,
-    background, text
+    background, text,
+    dark: [
+      "#C9C9C9",
+      "#B8B8B8",
+      "#828282",
+      "#696969",
+      "#424242",
+      "#3B3B3B",
+      "#12151A",
+      "#242424",
+      "#1F1F1F",
+      "#141414"
+    ]
+    
   },
+
   fontFamily: 'Inter, sans-serif',
   primaryShade: { light: 6, dark: 6 },
   variantColorResolver: buttonVariantColorResolver,

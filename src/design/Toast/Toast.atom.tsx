@@ -1,11 +1,10 @@
-import { Notification, NotificationProps, Button, Paper, useMantineTheme } from '@mantine/core';
+import { Notification, NotificationProps, Button, Paper, useMantineTheme, useMantineColorScheme } from '@mantine/core';
 import { ReactNode, useState } from 'react';
 import classes from './Toast.module.css';
 import { ErrorIcon } from '../Icons/ErrorIcon';
 import { SuccessIcon } from '../Icons/SuccessIcon';
 import { WarningIcon } from '../Icons/WarningIcon';
-import { ChevronDownIcon } from '../Icons/ChevronDown';
-import { ChevronUpIcon } from '../Icons/ChevronUp';
+import {IconChevronDown, IconChevronUp} from "@tabler/icons-react"
 
 interface ToastProps extends NotificationProps {
   type?: 'success' | 'failure' | 'warning';
@@ -27,6 +26,7 @@ export const Toast = ({
 }: ToastProps) => {
   const [openDetails, setOpenDetails] = useState(false);
   const theme = useMantineTheme();
+  const {colorScheme} = useMantineColorScheme();
 
   const getIcon = (type: ToastProps['type']) => {
     switch (type) {
@@ -106,27 +106,33 @@ export const Toast = ({
           }}
           rightSection={
             !openDetails ? (
-              <ChevronDownIcon style={{ marginLeft: '2px !important' }} />
+              <IconChevronDown size={14} style={{ marginLeft: '2px !important'}} />
             ) : (
-              <ChevronUpIcon style={{ marginLeft: '2px !important' }} />
+              <IconChevronUp size={14} style={{ marginLeft: '2px !important' }} />
             )
           }
         >
+          
           {openDetails ? 'Hide Details' : 'View Details'}
+
+        
+        
+         
+
         </Button>
       )}
       {openDetails && (
         <Paper
           style={{
             borderRadius: theme.radius.xs,
-            background: theme.colors.background[1],
+            background: colorScheme === "light" ? theme.colors.background[1]: theme.colors.background[2],
             padding: "2px 8px",
             marginTop: theme.spacing.xs,
             fontSize: 10,
             fontWeight: 500,
             lineHeight: "13px",
             maxWidth: 200,
-            color: theme.colors.text[1]
+            color: colorScheme === "light" ? theme.colors.text[1] : theme.colors.text[2]
           }}
         >
           {details}
