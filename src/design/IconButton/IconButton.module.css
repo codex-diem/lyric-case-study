@@ -1,0 +1,147 @@
+.lyricBlueRoot {
+
+    --ai-size-xs: rem(26px);
+    --ai-size-sm: rem(32px);
+    --ai-size-md: rem(42px);
+
+
+    &[data-variant='transparent']:not([disabled]):hover {
+
+        border-bottom: 1px solid;
+        padding-left: 0;
+        padding-right: 0;
+        box-shadow: none;
+
+    }
+    &[data-variant='transparent']:active {
+
+        border-bottom: 1px solid;
+        padding-left: 0;
+        padding-right: 0;
+
+    }
+
+    &[data-variant='filled']:disabled {
+      
+        background-color: var(--mantine-color-lyricBlue-10);
+        color:  #F5F7FA90;
+        
+      }
+
+      &[data-variant='outline']:disabled {
+      
+        color: var(--mantine-color-lyricBlue-10);
+        border-color: var(--mantine-color-lyricBlue-10);
+        background-color:  var(--mantine-color-lyricBlue-12)
+        
+      }
+
+      &[data-variant='default']:disabled {
+      
+        background-color: var(--mantine-color-white);
+        color:  #D7DADE;
+        border-color:  #D7DADE;
+
+        
+      }
+
+      &[data-variant='transparent']:disabled {
+
+        background-color: transparent;
+        color: var(--mantine-color-lyricBlue-10);
+        border: none;
+
+    }
+
+
+    &[data-size="md"] svg {
+        width: rem(18px);
+        height: rem(18px)
+    }
+
+    &[data-size="sm"] svg {
+        width: rem(14px);
+        height: rem(14px)
+    }
+    &[data-size="xs"] svg {
+        width: rem(12px);
+        height: rem(12px)
+    }
+
+
+}
+
+
+
+
+.secondaryRoot {
+
+    --ai-size-xs: rem(26px);
+    --ai-size-sm: rem(32px);
+    --ai-size-md: rem(42px);
+
+
+
+  &[data-variant='transparent']:not([disabled]):hover {
+
+      border-bottom: 1px solid;
+      padding-left: 0;
+      padding-right: 0;
+      box-shadow: none;
+
+  }
+  &[data-variant='transparent']:active {
+
+      border-bottom: 1px solid;
+      padding-left: 0;
+      padding-right: 0;
+
+  }
+
+  &[data-variant='filled']:disabled {
+    
+      background-color: var(--mantine-color-secondary-10);
+      color:  #F5F7FA90;
+      
+    }
+
+    &[data-variant='outline']:disabled {
+    
+      color: var(--mantine-color-secondary-10);
+      border-color: var(--mantine-color-secondary-10);
+      background-color:  var(--mantine-color-secondary-12)
+      
+    }
+
+    &[data-variant='default']:disabled {
+    
+      background-color: var(--mantine-color-white);
+      color:  #D7DADE;
+      border-color:  #D7DADE;
+
+      
+    }
+
+    &[data-variant='transparent']:disabled {
+
+      background-color: transparent;
+      color: var(--mantine-color-secondary-10);
+      border: none;
+
+  }
+
+  &[data-size="md"] svg {
+    width: rem(18px);
+    height: rem(18px)
+}
+
+&[data-size="sm"] svg {
+    width: rem(14px);
+    height: rem(14px)
+}
+&[data-size="xs"] svg {
+    width: rem(12px);
+    height: rem(12px)
+}
+
+}
